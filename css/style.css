@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --brandcolor:rgb(66, 160, 248);
+    --darkmain:rgb(36, 40, 44);
+    --darksecondary: rgb(29, 31, 34);
+    --darktertiary: rgb(16, 17, 19);
+    --lightgrey: rgb(228, 226, 226);
+}
+
+.link {
+    color: var(--brandcolor);
+}
+
+.stick {
+    position: sticky;
+    top: 0;
+}
+
+body {
+    padding: 10vh 10vw 0 10vw;
+}
+
+/* Night Mode Class Styles */
+
+#nightmain {
+    transition: color 0.2s ease;
+    transition: background 0.2s ease;
+}
+
+.nightmode-s{
+    color:var(--brandcolor);
+}
+
+.nightmode, .nightmode-w{
+    color:black;
+}
+
+.nightmode-div{
+    background-color: white;
+    box-shadow: grey 4px 3px 10px;
+}
+
+.nightmode-div2{
+    background-color: var(--lightgrey);
+}
+
+/* Header Styles */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header a {
+    text-decoration: underline wavy;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
+header p {
+    margin: 10px 0 20px 0;
+}
+
+.toggle {
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 12px;
+    transition: transform 0.1s ease;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.toggle:hover {
+    transform: scale(1.1);
+}
+
+section {
+    margin-top: 25px;
+}
+
+section h2 {
+    font-weight: 900;
+}
+
+section h2 i {
+    margin-right: 10px;
+}
+
+/* Navigation Styles */
+
+nav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 12px;
+    text-wrap: nowrap;
+    padding: 7px 14px 7px 17px;
+    border-radius: 100px;
+}
+
+nav i {
+    margin-right: 5px;
+}
+
+nav ul li {
+    margin: 5px;
+    transition: transform 0.1s ease;
+}
+
+nav ul li:hover {
+    transform: rotate(4deg) scale(1.1);
+}
+
+/* Table Styles */
+
+
+#athlete-results {
+    max-height: 60vh;
+    overflow-y: scroll;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    max-height: 60vh;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+table img {
+    border-radius: 10px;
+}
+
+table th {
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+table td {
+    padding: 5px;
+}
+
+/* Footer Styles */
+
+footer {
+    padding: 10px;
+}
+
+/* CSS Fixes */
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+ #athlete-results a {
+    color: var(--brandcolor) !important;
+}
