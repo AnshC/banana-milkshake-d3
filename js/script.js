@@ -1,18 +1,3 @@
-/* Night Mode JavaScript By Ansh Chauhan 
-https://github.com/AnshC  
-https://anshc.github.io 
-*/
-
-
-/* 
-
-Go through the "nightmode()" function and have fun experimenting with it.
-Make sure that to render nightmode, you need to run the "nightmode()" function
-To defualt load the page into nightmode, use an onload function on the body tag.
-
-*/
-
-
 // Toggle Functions
 
 let NIGHTSTATE = false; 
