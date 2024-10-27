@@ -25,6 +25,7 @@ const nightmode_elements_white = document.getElementById("nightmain").querySelec
 const nightmode_elements_switch = document.getElementById("nightmain").querySelectorAll(".nightmode-s");
 const nightmode_elements_div = document.getElementById("nightmain").querySelectorAll(".nightmode-div");
 const nightmode_elements_div2 = document.getElementById("nightmain").querySelectorAll(".nightmode-div2");
+const nightmode_links = document.getElementById("nightmain").querySelectorAll("a");
 
 // Main On Click Function
 
@@ -34,7 +35,7 @@ function nightmode(){
     
     function setState(state){
         NIGHTSTATE = state;
-        console.log("State: ", NIGHTSTATE);
+        // console.log("State: ", NIGHTSTATE);
     }
 
     if(NIGHTSTATE == false){
@@ -43,7 +44,7 @@ function nightmode(){
 
         setState(true)
         for (var i = 0; i < nightmode_elements.length; i++){
-            nightmode_elements[i].style.color = "var(--brandcolor)";
+            nightmode_elements[i].style.color = "var(--brandcolor2)";
         }
         for(var i = 0; i < nightmode_elements_white.length; i++){
             nightmode_elements_white[i].style.color = "white";
@@ -59,16 +60,27 @@ function nightmode(){
             nightmode_elements_div2[i].style.backgroundColor = "var(--darktertiary)";
             nightmode_elements_div2[i].style.border = "none";
         }
+
+        for (var i = 0; i < nightmode_links.length; i++) {
+            nightmode_links[i].style.color = "var(--brandcolor2)"
+        }
         document.getElementById("nightmain").style.backgroundColor = "var(--darkmain)";
         
         document.getElementById("toggle").innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode'
 
         //Resetting the function (stopping the function here)
 
-        let table = document.querySelector('#team-results table tbody');
-        for (var i = 0; i < table.childElementCount; i++) {
-            if (i % 2 == 1) {
-                table.childNodes[i].style.backgroundColor = "red";
+        let teamResults = document.querySelector('#team-results table tbody');
+        for (var i = 1; i < teamResults.childElementCount; i++) {
+            if (i % 2 == 0) {
+                teamResults.childNodes[i].style.backgroundColor = "var(--darktertiary)";
+            }
+        }
+
+        let athleteResults = document.querySelector('#athlete-results table tbody');
+        for (var i = 1; i < athleteResults.childElementCount; i++) {
+            if (i % 2 == 0) {
+                athleteResults.childNodes[i].style.backgroundColor = "var(--darktertiary)";
             }
         }
 
@@ -98,16 +110,28 @@ function nightmode(){
             for(var i = 0; i < nightmode_elements_div2.length; i++){
                 nightmode_elements_div2[i].style.backgroundColor = "var(--lightgrey)";
             }
+
+            for (var i = 0; i < nightmode_links.length; i++) {
+                nightmode_links[i].style.color = "var(--brandcolor)"
+            }
+
             document.getElementById("nightmain").style.backgroundColor = "white";
 
             document.getElementById("toggle").innerHTML = '<i class="fa-solid fa-moon"></i> Night Mode'
 
-            let table = document.querySelector('#team-results table tbody');
-        for (var i = 0; i < table.childElementCount; i++) {
-            if (i % 2 == 1) {
-                table.childNodes[i].style.backgroundColor = "green";
+            let teamResults = document.querySelector('#team-results table tbody');
+            for (var i = 1; i < teamResults.childElementCount; i++) {
+                if (i % 2 == 0) {
+                    teamResults.childNodes[i].style.backgroundColor = "var(--lightgrey)";
+                }
             }
-        }
+
+            let athleteResults = document.querySelector('#athlete-results table tbody');
+            for (var i = 1; i < athleteResults.childElementCount; i++) {
+                if (i % 2 == 0) {
+                    athleteResults.childNodes[i].style.backgroundColor = "var(--lightgrey)";
+                }
+            }
 
         }
    }

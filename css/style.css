@@ -8,7 +8,8 @@
 }
 
 :root{
-    --brandcolor:rgb(34, 133, 226);
+    --brandcolor:#0F4171;
+    --brandcolor2: #81B9EF;
     --darkmain:rgb(36, 40, 44);
     --darksecondary: rgb(29, 31, 34);
     --darktertiary: rgb(16, 17, 19);
@@ -26,6 +27,10 @@
 
 body {
     padding: 10vh 10vw 0 10vw;
+}
+
+a {
+    color: var(--brandcolor);
 }
 
 /* Night Mode Class Styles */
@@ -86,10 +91,20 @@ header p {
     font-weight: 800;
     margin-bottom: 20px;
     margin-top: 10px;
+    outline: none;
+    border: none;
+}
+
+.toggle:focus {
+    outline: 2px solid  rgb(0, 85, 255);
 }
 
 .toggle:hover {
     transform: scale(1.1);
+}
+
+.toggle i {
+    margin-right: 5px;
 }
 
 section {
@@ -183,8 +198,4 @@ footer {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-}
-
- #athlete-results a {
-    color: var(--brandcolor) !important;
 }
