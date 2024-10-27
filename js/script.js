@@ -61,9 +61,17 @@ function nightmode(){
         }
         document.getElementById("nightmain").style.backgroundColor = "var(--darkmain)";
         
+        document.getElementById("toggle").innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode'
+
         //Resetting the function (stopping the function here)
 
-        document.getElementById("toggle").innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode'
+        let table = document.querySelector('#team-results table tbody');
+        for (var i = 0; i < table.childElementCount; i++) {
+            if (i % 2 == 1) {
+                table.childNodes[i].style.backgroundColor = "red";
+            }
+        }
+
 
         toggle = true;
     }
@@ -93,6 +101,13 @@ function nightmode(){
             document.getElementById("nightmain").style.backgroundColor = "white";
 
             document.getElementById("toggle").innerHTML = '<i class="fa-solid fa-moon"></i> Night Mode'
+
+            let table = document.querySelector('#team-results table tbody');
+        for (var i = 0; i < table.childElementCount; i++) {
+            if (i % 2 == 1) {
+                table.childNodes[i].style.backgroundColor = "green";
+            }
+        }
 
         }
    }

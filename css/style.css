@@ -8,7 +8,7 @@
 }
 
 :root{
-    --brandcolor:rgb(66, 160, 248);
+    --brandcolor:rgb(34, 133, 226);
     --darkmain:rgb(36, 40, 44);
     --darksecondary: rgb(29, 31, 34);
     --darktertiary: rgb(16, 17, 19);
@@ -149,6 +149,9 @@ nav ul li:hover {
 
 table {
     border-collapse: collapse;
+}
+
+#athlete-results table {
     max-height: 60vh;
     overflow-y: scroll;
     text-align: center;
@@ -162,10 +165,6 @@ table th {
     padding: 3px;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-table tr:nth-child(even) {
-    background-color: lightgrey;
 }
 
 table td {
