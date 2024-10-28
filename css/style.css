@@ -203,7 +203,15 @@ footer {
 /* Prefers Reduced Motion */
 
 @media (prefers-reduced-motion) {
-    * {
+    nav ul li {
+        transition: none; 
+    }
+
+    .toggle {
+        transition: none;
+    }
+
+    #nightmain {
         transition: none;
     }
 }
